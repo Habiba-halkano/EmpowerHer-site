@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Contact Us</title>
+    {% load static %}
+    <!-- Bootstrap CSS (Ensure Bootstrap is linked) -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link href="../../static/css/style.css" rel="stylesheet">
+    <!-- Your custom CSS -->
+<!--    <style>-->
+<!--        /* Center the form in the middle of the page */-->
+<!--.center-page {-->
+<!--    display: flex;-->
+<!--    align-items: center;-->
+<!--    justify-content: center;-->
+<!--    height: 100vh;-->
+<!--    background-color: #f7f7f7; /* Optional background color */-->
+<!--}-->
+
+<!--.form-container {-->
+<!--    width: 100%;-->
+<!--    max-width: 500px;-->
+<!--    padding: 20px;-->
+<!--    background-color: #fff;-->
+<!--    border-radius: 8px;-->
+<!--    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);-->
+<!--}-->
+
+<!--h2 {-->
+<!--    text-align: center;-->
+<!--    margin-bottom: 20px;-->
+<!--    color: #333;-->
+<!--}-->
+
+<!--.form-group {-->
+<!--    margin-bottom: 15px;-->
+<!--}-->
+
+<!--label {-->
+<!--    font-weight: bold;-->
+<!--    color: #555;-->
+<!--}-->
+
+<!--input, textarea {-->
+<!--    width: 100%;-->
+<!--    padding: 10px;-->
+<!--    border: 1px solid #ddd;-->
+<!--    border-radius: 5px;-->
+<!--}-->
+
+<!--input:focus, textarea:focus {-->
+<!--    outline: none;-->
+<!--    border-color: #007bff;-->
+<!--    box-shadow: 0 0 5px rgba(0, 123, 255, 0.3);-->
+<!--}-->
+
+<!--button {-->
+<!--    width: 100%;-->
+<!--    padding: 10px;-->
+<!--    background-color: #007bff;-->
+<!--    border: none;-->
+<!--    border-radius: 5px;-->
+<!--    color: white;-->
+<!--    font-size: 16px;-->
+<!--    cursor: pointer;-->
+<!--    transition: background-color 0.3s;-->
+<!--}-->
+
+<!--button:hover {-->
+<!--    background-color: #0056b3;-->
+<!--}-->
+
+    <style>
+.back-home {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.back-home .btn {
+    padding: 10px 20px;
+    background-color: #6c757d;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 16px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.back-home .btn:hover {
+    background-color: #5a6268;
+    color: white;
+}
+    </style>
+
+</head>
+<body>
+    <!-- Include Navbar -->
+
+   <div class="center-page">
+    <div class="form-container">
+        <form method="POST" action="{% url 'contact' %}">
+            {% csrf_token %}
+            <h2>Contact Us</h2>
+
+            <!-- Fields -->
+            <div class="form-group">
+                <label for="name">Full Name</label>
+                <input type="text" name="name" id="name" class="form-control" placeholder="Enter your full name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" name="email" id="email" class="form-control" placeholder="Enter your email" required>
+            </div>
+            <div class="form-group">
+                <label for="message">Your Message</label>
+                <textarea name="message" id="message" class="form-control" placeholder="Type your message here" rows="5" required></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Send Message</button>
+        </form>
+
+        <!-- Back to Home Button -->
+        <div class="back-home">
+            <a href="{% url 'home' %}" class="btn btn-secondary">Back to Home</a>
+        </div>
+    </div>
+</div>
+
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

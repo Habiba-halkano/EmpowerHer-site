@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SUBMIT REPPORT</title>
+    {% load static %}
+    <!-- Bootstrap CSS (Ensure Bootstrap is linked) -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link href="../../../accounts/static/css/style.css" rel="stylesheet">
+    <style>
+        /* Apply this to the form container or the whole page */
+body {
+    background: rgb(255, 0, 0); /* Red color */
+    background: linear-gradient(45deg, rgb(255, 0, 0), rgb(0, 255, 0), rgb(0, 0, 255)); /* Gradient from red to green to blue */
+    background-size: 400% 400%;
+    animation: gradientBackground 10s ease infinite; /* Smooth animation for the gradient */
+}
+
+@keyframes gradientBackground {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* If you want a background for a specific form: */
+.form-container {
+    background: linear-gradient(135deg, rgb(255, 192, 203), rgb(135, 206, 250)); /* Pink to SkyBlue */
+    padding: 20px;
+    border-radius: 10px;
+}
+
+form {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 2px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/*form label {*/
+/*    display: block;*/
+/*    font-weight: bold;*/
+/*    margin-bottom: 8px;*/
+/*    color: #333;*/
+/*}*/
+
+form input,
+form textarea,
+form select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+form input:focus,
+form textarea:focus,
+form select:focus {
+    border-color: #007bff;
+    box-shadow: 0px 0px 5px rgba(0, 123, 255, 0.5);
+    outline: none;
+}
+
+form button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+form button:hover {
+    background-color: #0056b3;
+}
+
+.error-message {
+    color: red;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.success-message {
+    color: green;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.form-container {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/*h2 {*/
+/*    text-align: center;*/
+/*    margin-bottom: 20px; !* Ensures spacing below the heading *!*/
+/*    font-size: 24px; !* Increase if the font is too small *!*/
+/*    color: #333;*/
+/*    visibility: visible;*/
+/*}*/
+
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    font-weight: bold;
+    color: #555;
+}
+
+input, textarea, select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+input:focus, textarea:focus, select:focus {
+    outline: none;
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.3);
+}
+
+.error-message {
+    color: red;
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    color: #fff;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+}
+
+
+.center-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.form-container {
+    width: 100%;
+    max-width: 600px;
+    padding: 30px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 0 auto;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.back-home {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.back-home .btn {
+    padding: 10px 20px;
+    background-color: #6c757d;
+    border: none;
+    border-radius: 5px;
+    color: white;
+}
+
+.back-home .btn:hover {
+    background-color: #5a6268;
+}
+
+    </style>
+
+    <!-- Your custom CSS -->
+</head>
+<body>
+    <!-- Include Navbar -->
+
+    <div class="center-page">
+    <div class="form-container">
+        <h2 class="text-center mb-4">Submit a Report</h2>
+        <form method="POST" enctype="multipart/form-data">
+            {% csrf_token %}
+
+            <div class="form-group mb-3">
+                <label for="title">Report Title</label>
+                {{ form.title }}
+            </div>
+
+            <div class="form-group mb-3">
+                <label for="location">Location</label>
+                {{ form.location }}
+            </div>
+
+            <div class="form-group mb-3">
+                <label for="description">Report Description</label>
+                {{ form.description }}
+            </div>
+
+            <div class="form-group mb-3">
+                <label for="supporting_files">Supporting Files</label>
+                {{ form.supporting_files }}
+            </div>
+
+            <div class="form-group mb-3">
+                <label for="date">Date</label>
+                {{ form.date }}
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-block">Submit Report</button>
+        </form>
+        <div class="back-home">
+            <a href="{% url 'dashboard' %}" class="btn btn-secondary">Back to Home</a>
+        </div>
+    </div>
+</div>
+
+<!-- SweetAlert for Success -->
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script>
+    {% if success %}
+    Swal.fire({
+        title: 'Thank You!',
+        text: 'Your report has been received successfully.',
+        icon: 'success',
+        confirmButtonText: 'OK'
+    });
+    {% endif %}
+</script>
+
+    <script>
+    document.querySelectorAll("input").forEach(input => {
+        input.addEventListener("blur", function () {
+            if (this.value === "") {
+                this.style.borderColor = "red";
+            } else {
+                this.style.borderColor = "green";
+            }
+        });
+    });
+</script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

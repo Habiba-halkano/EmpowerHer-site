@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Profile</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #01d262, #0a8f8f);
+            color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            height: 100vh;
+        }
+
+        .edit-profile-container {
+            width: 70%;
+            max-width: 500px;
+            background-color: white;
+            padding: 20px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+            border-radius: 12px;
+            text-align: center;
+            margin-top: 50px; /* Adjusted margin to shift the container up */
+        }
+
+        h1 {
+            font-size: 24px;
+            color: #01d262;
+            margin-bottom: 20px;
+        }
+
+        .edit-profile-form {
+            margin-top: 20px;
+        }
+
+        .edit-profile-form label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+            text-align: left;
+            color: #555;
+        }
+
+        .edit-profile-form input {
+            width: 100%;
+            padding: 5px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+
+        .btn {
+            display: inline-block;
+            width: 100%;
+            padding: 10px;
+            background: linear-gradient(135deg, #01d262, #0a8f8f);
+            color: white;
+            font-weight: bold;
+            text-align: center;
+            border-radius: 8px;
+            text-decoration: none;
+            border: none;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        .btn:hover {
+            background: linear-gradient(135deg, #0a8f8f, #01d262);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="edit-profile-container">
+        <h1>Edit Profile</h1>
+        <form class="edit-profile-form" method="POST">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit" class="btn">Save Changes</button>
+        </form>
+    </div>
+
+</body>
+</html>

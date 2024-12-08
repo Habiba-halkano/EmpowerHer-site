@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="../../static/css/styles.css" rel="stylesheet">
+</head>
+<body>
+{% block title %}Reply to Post{% endblock %}
+{% block content %}
+<h1>Reply to Post</h1>
+<div class="post">
+    <p><strong>{{ post.user.username }}</strong> said:</p>
+    <p>{{ post.content }}</p>
+</div>
+<form method="POST">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+<a href="{% url 'community_forum' %}" class="btn btn-secondary">Back to Forum</a>
+{% endblock %}
+</body>
+</html>

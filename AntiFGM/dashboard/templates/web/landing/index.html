@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Front page</title>
+    {% load static %}
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900" rel="stylesheet">
+
+    <link rel="stylesheet" href="../../../static/css/bootstrap.css">
+    <link rel="stylesheet" href="../../../static/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../../../static/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="../../../static/css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="../../../static/style.css">
+    <link rel="stylesheet" href="../../../static/responsive.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <header class="header">
+            <section class="header-top">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-8 col-sm-8 col-xs-12">
+                            <div class="contact">
+                                <p><span class="phone"><a href="#">Phone: +254 746603906</a></span><span class="email"><a href="#">Email: halkanohabiba8@gmail.com</a></span></p>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-4" style="padding: 12px">
+                            <div class="join-us">
+                                <p><a class="btn btn-success" href="{% url 'login' %}" class="btn btn-primary"> Login</a><p>
+                                    <a href="{% url 'register' %}" class="btn btn-secondary">Sign Up/ Register</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="header-bottom">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-5 col-sm-12 col-xs-12">
+                            <a href="#">
+                                <div class="main-logo">
+                                    <h2>EMPOWER HER</h2>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-md-7 col-sm-12 col-xs-12">
+                            <div class="menu">
+                                <ul class="nav navbar-nav">
+                                    <li class="active"><a href="#">HOME</a></li>
+                                    <li><a href="#">ABOUT US</a></li>
+                                    <li><a href="#">CAUSES</a></li>
+                                    <li><a href="{% url 'contact' %}">CONTACT US</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </header>
+        <section class="carosal-area">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="client owl-carousel owl-theme">
+                            <div class="item">
+                                <div class="text">
+                                    <h3>OUR MISSION</h3>
+                                     <p style="font-size: 2rem">To eradicate FGM and empower communities with knowledge and resources to champion human rights and gender equality.</p>
+<!--                                    <h5 class="white-button"><a href="#">DONATE NOW</a></h5>-->
+<!--                                    <h5><a href="#">CONTACT US</a></h5>-->
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="text">
+                                    <h3>OUR VISION</h3>
+                                    <p style="font-size: 2rem">A society free from harmful practices, where every individual has the opportunity to thrive in a safe and supportive environment.</p>
+<!--                                    <h5 class="white-button"><a href="#">DONATE NOW</a></h5>-->
+<!--                                    <h5><a href="#">CONTACT US</a></h5>-->
+                                </div>
+                            </div>
+<!--                            <div class="item">-->
+<!--                                <div class="text">-->
+<!--                                    <h3>CHILDREN NEED YOUR HELP</h3>-->
+<!--                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim <br> ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo </p>-->
+<!--                                    <h5 class="white-button"><a href="#">DONATE NOW</a></h5>-->
+<!--                                    <h5><a href="#">CONTACT US</a></h5>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                            <div class="item">-->
+<!--                                <div class="text">-->
+<!--                                    <h3>CHILDREN NEED YOUR HELP</h3>-->
+<!--                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim <br> ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo </p>-->
+<!--                                    <h5 class="white-button"><a href="#">DONATE NOW</a></h5>-->
+<!--                                    <h5><a href="#">CONTACT US</a></h5>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                            <div class="item">-->
+<!--                                <div class="text">-->
+<!--                                    <h3>CHILDREN NEED YOUR HELP</h3>-->
+<!--                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim <br> ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo </p>-->
+<!--                                    <h5 class="white-button"><a href="#">DONATE NOW</a></h5>-->
+<!--                                    <h5><a href="#">CONTACT US</a></h5>-->
+<!--                                </div>-->
+<!--                            </div>-->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="our_activity">
+            <h2>OUR ACTIVITY</h2>
+            <p>Through our dedicated efforts, we engage in a variety of initiatives aimed at empowering communities, promoting awareness, and supporting individuals  <br> in the fight against harmful practices like FGM. Below are the key activities that drive our mission forward. </p>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4 col-xs-12">
+                        <div class="single-Promo">
+                            <div class="promo-icon">
+                                <i class="material-icons">near_me</i>
+                            </div>
+                            <h2><a href="#">Education</a></h2>
+                            <p>We conduct educational workshops to empower communities with knowledge about FGM dangers and equip individuals with skills to advocate for change.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-xs-12">
+                        <div class="single-Promo">
+                            <div class="promo-icon">
+                                <i class="material-icons">favorite</i>
+                            </div>
+                            <h2><a href="#">Volunteering</a></h2>
+                            <p>We offer a platform for individuals to contribute their time and skills to support our advocacy efforts and make a lasting impact in the fight against FGM.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-xs-12">
+                        <div class="single-Promo">
+                            <div class="promo-icon">
+                                <i class="material-icons">dashboard</i>
+                            </div>
+                            <h2><a href="#">Support For Survivors</a></h2>
+                            <p>Our platform connects survivors with vital emotional, legal, and medical services, fostering recovery and providing resources to help rebuild their lives and regain confidence</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="donate_section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 for-padding">
+                        <h4>URGENT CAUSE</h4>
+                        <h3>WHY THIS ADVOCACY MATTERS</h3>
+                        <P>Female Genital Mutilation (FGM) remains one of the most pervasive and harmful practices affecting girls and women worldwide. Despite being outlawed in many regions, millions of young girls are still at risk of undergoing this cruel practice. It is crucial that we act now to protect these vulnerable girls and end this cycle of violence.</P>
+                        <p>The urgency of this cause cannot be overstated. Every year, thousands of girls suffer physical and psychological consequences that affect their health, rights, and future. This advocacy is aimed at raising awareness, providing support to survivors, and educating communities on the devastating effects of FGM.</p>
+                        <div class="progress-text">
+                            <p class="progress-top">50%</p>
+                            <div class="progress">
+                                <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width:50%"></div>
+                            </div>
+                            <p class="progress-left">Affected: 140M girls</p>
+                            <p class="progress-right">Total Affected: 200M girls</p>
+
+                        </div>
+                        <h2><a href="#">Support The Cause</a></h2>
+                    </div>
+                </div>
+            </div>
+        </section>
+<!--        <section class="events_section_area">-->
+<!--            <h2>UPCOMING EVENTS</h2>-->
+<!--            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor <br> incididunt ut labore et dolore magna aliqua. </p>-->
+<!--            <div class="container">-->
+<!--                <div class="row">-->
+<!--                    <div class="col-md-4 col-xs-12">-->
+<!--                        <div class="events_single">-->
+<!--                            <img src="../../../static/img/events_single_one.jpg" alt="">-->
+<!--                            <p><span class="event_left"><i class="material-icons">access_time</i>1:00 pm - 3:00 pm</span><span class="event_right"><i class="material-icons">location_on</i>California Street</span></p>-->
+<!--                            <div class="clear"></div>-->
+<!--                            <h3>Education For Children</h3>-->
+<!--                            <h6>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,</h6>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                    <div class="col-md-4 col-xs-12">-->
+<!--                        <div class="events_single">-->
+<!--                            <img src="../../../static/img/events_single_two.jpg" alt="">-->
+<!--                            <p><span class="event_left"><i class="material-icons">access_time</i>1:00 pm - 3:00 pm</span><span class="event_right"><i class="material-icons">location_on</i>California Street</span></p>-->
+<!--                            <h3>Education For Children</h3>-->
+<!--                            <h6>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,</h6>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                    <div class="col-md-4 col-xs-12">-->
+<!--                        <div class="events_single">-->
+<!--                            <img src="../../../static/img/events_single_three.jpg" alt="">-->
+<!--                            <p><span class="event_left"><i class="material-icons">access_time</i>1:00 pm - 3:00 pm</span><span class="event_right"><i class="material-icons">location_on</i>California Street</span></p>-->
+<!--                            <h3>Education For Children</h3>-->
+<!--                            <h6>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,</h6>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </section>-->
+
+
+        <div class="block-wrapper">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3 col-sm-3 col-xs-6 for-border">
+                        <div class="block">
+                            <p><i class="material-icons">favorite</i></p>
+                            <p class="counter-wrapper"><span class="fb"></span></p>
+                            <p class="text-block">CAUSES</p>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-3 col-xs-6 for-border">
+                        <div class="block">
+                            <p><i class="material-icons">language</i></p>
+                            <p class="counter-wrapper"><span class="code"></span></p>
+                            <p class="text-block">PLACES</p>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-3 col-xs-6 for-border">
+                        <div class="block">
+                            <p><i class="material-icons">person_add</i></p>
+                            <p class="counter-wrapper"><span class="bike"></span></p>
+                            <p class="text-block">VOLUNTEERS</p>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-3 col-xs-6 for-border">
+                        <div class="block">
+                            <p><i class="material-icons">people</i></p>
+                            <p class="counter-wrapper"><span class="coffee"></span></p>
+                            <p class="text-block">SAVED</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+<!--        <section class="our_cuauses">-->
+<!--            <h2>OUR CAUSES</h2>-->
+<!--            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor <br> incididunt ut labore et dolore magna aliqua. </p>-->
+<!--            <div class="container">-->
+<!--                <div class="row">-->
+<!--                    <div class="col-md-12">-->
+<!--                        <div class="our_cuauses_single owl-carousel owl-theme">-->
+<!--                            <div class="item">-->
+<!--                                <img src="../../../static/img/our_cuauses_one.jpg" alt="">-->
+<!--                                <div class="for_padding">-->
+<!--                                    <h2>FUTURES FOR GIRLS</h2>-->
+<!--                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minima</p>-->
+<!--                                    <div class="progress-text">-->
+<!--                                        <p class="progress-top">50%</p>-->
+<!--                                        <div class="progress">-->
+<!--                                            <div class="progress-bar" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width:50%"></div>-->
+<!--                                        </div>-->
+<!--                                        <p class="progress-left">Raised: <span>$1200</span></p>-->
+<!--                                        <p class="progress-right">Goal: <span>$2400</span></p>-->
+<!--                                    </div>-->
+<!--                                    <h2 class="borderes"><a href="#">DONATE NOW</a></h2>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                            <div class="item">-->
+<!--                                <img src="../../../static/img/our_cuauses_two.jpg" alt="">-->
+<!--                                <div class="for_padding">-->
+<!--                                    <h2>FUTURE  FOR FEMALES</h2>-->
+<!--                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minima</p>-->
+<!--                                    <div class="progress-text">-->
+<!--                                        <p class="progress-top">50%</p>-->
+<!--                                        <div class="progress">-->
+<!--                                            <div class="progress-bar" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width:50%"></div>-->
+<!--                                        </div>-->
+<!--                                        <p class="progress-left">Raised: <span>$1200</span></p>-->
+<!--                                        <p class="progress-right">Goal: <span>$2400</span></p>-->
+<!--                                    </div>-->
+<!--                                    <h2 class="borderes"><a href="#">DONATE NOW</a></h2>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                            <div class="item">-->
+<!--                                <img src="../../../static/img/our_cuauses_three.jpg" alt="">-->
+<!--                                <div class="for_padding">-->
+<!--                                    <h2>FUTURES FOR CHILDREN</h2>-->
+<!--                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minima</p>-->
+<!--                                    <div class="progress-text">-->
+<!--                                        <p class="progress-top">50%</p>-->
+<!--                                        <div class="progress">-->
+<!--                                            <div class="progress-bar" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width:50%"></div>-->
+<!--                                        </div>-->
+<!--                                        <p class="progress-left">Raised: <span>$1200</span></p>-->
+<!--                                        <p class="progress-right">Goal: <span>$2400</span></p>-->
+<!--                                    </div>-->
+<!--                                    <h2 class="borderes"><a href="#">DONATE NOW</a></h2>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                            <div class="item">-->
+<!--                                <img src="../../../static/img/our_cuauses_three.jpg" alt="">-->
+<!--                                <div class="for_padding">-->
+<!--                                    <h2>FUTURES FOR CHILDREN</h2>-->
+<!--                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minima</p>-->
+<!--                                    <div class="progress-text">-->
+<!--                                        <p class="progress-top">50%</p>-->
+<!--                                        <div class="progress">-->
+<!--                                            <div class="progress-bar" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width:50%"></div>-->
+<!--                                        </div>-->
+<!--                                        <p class="progress-left">Raised: <span>$1200</span></p>-->
+<!--                                        <p class="progress-right">Goal: <span>$2400</span></p>-->
+<!--                                    </div>-->
+<!--                                    <h2 class="borderes"><a href="#">DONATE NOW</a></h2>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </section>-->
+<!--        <section class="donors">&ndash;&gt;-->
+<!--            <div class="container">-->
+<!--                <div class="row">-->
+<!--                    <div class="col-md-12">-->
+<!--                        <div class="donors_input">-->
+<!--                            <h2>DONATION NOW</h2>-->
+<!--                            <form action="#" method="post">-->
+<!--                                <p class="amount">-->
+<!--                                    <label for="usd">AMOUNT : </label>-->
+<!--                                    <input type="radio" name="usd" id="usd" checked>20usd-->
+<!--                                    <input type="radio" name="usd" id="usd">50usd-->
+<!--                                    <input type="radio" name="usd" id="usd">100usd </p>-->
+<!--                                <p class="type">-->
+<!--                                    <label for="type">TYPE : </label>-->
+<!--                                    <input type="radio" name="time" id="type" checked>One Time-->
+<!--                                    <input type="radio" name="time" id="type">Monthly-->
+<!--                                    <input type="radio" name="time" id="type">Yearly <br>-->
+<!--                                </p>-->
+<!--                                <h5>-->
+<!--                                    <input type="text" placeholder="Name">-->
+<!--                                    <input type="email" placeholder="Email">-->
+<!--                                </h5>-->
+<!--                                <h4>-->
+<!--                                    <select>-->
+<!--                                    <option>I Want To Donate For 1</option>-->
+<!--                                    <option>I Want To Donate For 2</option>-->
+<!--                                    <option>I Want To Donate For 3</option>-->
+<!--                                </select>-->
+<!--                                </h4>-->
+<!--                                <input type="submit" value="DONATION NOW">-->
+<!--                            </form>-->
+<!--                        </div>-->
+<!--                        <div class="donors_image">-->
+<!--                            <h2>FEATURED DONORS</h2>-->
+<!--                            <div class="donors_featured owl-carousel owl-theme">-->
+<!--                                <div class="item">-->
+<!--                                    <img src="../../../static/img/donors_featured_one.jpg" alt="">-->
+<!--                                    <h3>Kenneth J. Garnica</h3>-->
+<!--                                    <p>Donated Amount : <span>220 USD</span> </p>-->
+<!--                                </div>-->
+<!--                                <div class="item">-->
+<!--                                    <img src="../../../static/img/donors_featured_one.jpg" alt="">-->
+<!--                                    <h3>Kenneth J. Garnica</h3>-->
+<!--                                    <p>Donated Amount : <span>220 USD</span> </p>-->
+<!--                                </div>-->
+<!--                                <div class="item">-->
+<!--                                    <img src="../../../static/img/donors_featured_one.jpg" alt="">-->
+<!--                                    <h3>Kenneth J. Garnica</h3>-->
+<!--                                    <p>Donated Amount : <span>220 USD</span> </p>-->
+<!--                                </div>-->
+<!--                                <div class="item">-->
+<!--                                    <img src="../../../static/img/donors_featured_one.jpg" alt="">-->
+<!--                                    <h3>Kenneth J. Garnica</h3>-->
+<!--                                    <p>Donated Amount : <span>220 USD</span> </p>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </section>-->
+        <div class="clear"></div>
+<!--        <section class="volunteer_area">-->
+<!--            <h2>Our Volunteer</h2>-->
+<!--            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor <br> incididunt ut labore et dolore magna aliqua. </p>-->
+<!--            <div class="container">-->
+<!--                <div class="row">-->
+<!--                    <div class="col-md-12">-->
+<!--                        <div class="volunteer_single owl-carousel owl-theme">-->
+<!--                            <div class="item">-->
+<!--                                <img src="../../../static/img/volanteer_1.jpg" alt="">-->
+<!--                                <div class="text">-->
+<!--                                    <h3>Laura Jammy</h3>-->
+<!--                                    <h6>Designer</h6>-->
+<!--                                    <p>Lorem ipsum dolor sit amet, consectetur adipisi</p>-->
+<!--                                    <h5><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a><a href="#"><i class="fa fa-behance" aria-hidden="true"></i></a></h5>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                            <div class="item">-->
+<!--                                <img src="../../../static/img/volanteer_2.jpg" alt="">-->
+<!--                                <div class="text">-->
+<!--                                    <h3>Albert R. Ardoin</h3>-->
+<!--                                    <h6>Actor</h6>-->
+<!--                                    <p>Lorem ipsum dolor sit amet, consectetur adipisi</p>-->
+<!--                                    <h5><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a><a href="#"><i class="fa fa-behance" aria-hidden="true"></i></a></h5>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                            <div class="item">-->
+<!--                                <img src="../../../static/img/volanteer_3.jpg" alt="">-->
+<!--                                <div class="text">-->
+<!--                                    <h3>Cynthia Anni</h3>-->
+<!--                                    <h6>Singer</h6>-->
+<!--                                    <p>Lorem ipsum dolor sit amet, consectetur adipisi</p>-->
+<!--                                    <h5><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a><a href="#"><i class="fa fa-behance" aria-hidden="true"></i></a></h5>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                            <div class="item">-->
+<!--                                <img src="../../../static/img/volanteer_1.jpg" alt="">-->
+<!--                                <div class="text">-->
+<!--                                    <h3>Laura Jammy</h3>-->
+<!--                                    <h6>Designer</h6>-->
+<!--                                    <p>Lorem ipsum dolor sit amet, consectetur adipisi</p>-->
+<!--                                    <h5><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a><a href="#"><i class="fa fa-behance" aria-hidden="true"></i></a></h5>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                            <div class="item">-->
+<!--                                <img src="../../../static/img/volanteer_2.jpg" alt="">-->
+<!--                                <div class="text">-->
+<!--                                    <h3>Albert R. Ardoin</h3>-->
+<!--                                    <h6>Actor</h6>-->
+<!--                                    <p>Lorem ipsum dolor sit amet, consectetur adipisi</p>-->
+<!--                                    <h5><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a><a href="#"><i class="fa fa-behance" aria-hidden="true"></i></a></h5>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                            <div class="item">-->
+<!--                                <img src="../../../static/img/volanteer_3.jpg" alt="">-->
+<!--                                <div class="text">-->
+<!--                                    <h3>Cynthia Anni</h3>-->
+<!--                                    <h6>Singer</h6>-->
+<!--                                    <p>Lorem ipsum dolor sit amet, consectetur adipisi</p>-->
+<!--                                    <h5><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a><a href="#"><i class="fa fa-behance" aria-hidden="true"></i></a></h5>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </section>-->
+
+        <section class="carosal_bottom">
+                            <div class="block-wrapper">
+
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="carosal_bottom_single owl-carousel owl-theme">
+                            <div class="item">
+                                <img src="../../../static/img/volanteer_1.jpg" alt="">
+                    <p>Behind every great application is a robust system that powers it. I take pride in building efficient, secure, and scalable backends that ensure seamless functionality and enhance user satisfaction</p>                                <h5><i class="material-icons">format_quote</i></h5>
+                                <h4>Doreen Tiema</h4>
+                                <h6>Backend Developer</h6>
+                            </div>
+                            <div class="item">
+                                <img src="../../../static/img/volanteer_2.jpg" alt="">
+                    <p>Design is more than aesthetics; it's about creating meaningful experiences. I strive to blend functionality with beauty, ensuring each project resonates with its purpose. Whether it's a website, a logo, or an entire brand identity, my goal is to craft designs that leave a lasting impact</p>                                <h5><i class="material-icons">format_quote</i></h5>
+                                <h4>Florence M. Cofer</h4>
+                                <h6>Designer</h6>
+                            </div>
+                            <div class="item">
+                                <img src="../../../static/img/volanteer_3.jpg" alt="">
+                <p>Every line of code I write is a step toward solving a real-world problem. My passion lies in crafting reliable, efficient, and scalable solutions that empower users and drive innovation. Building software isn’t just my job; it’s my way of making an impact</p>                                <h5><i class="material-icons">format_quote</i></h5>
+                                <h4>Habiba Halkano</h4>
+                                <h6>Software Developer</h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="letast_news">
+            <h2>latest news</h2>
+        <p>Stay updated with the latest stories and developments from our advocacy efforts, community initiatives, and global news. <br> Explore insightful articles, impactful events, and inspiring stories that shape our journey toward positive change</p>            <div class="container">
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="single_news">
+                            <img src="../../../static/img/news_images_1.jpg" alt="">
+                            <div class="texts">
+                                <p class="date"><a href="#">30 May, 2017</a></p>
+                                <h3>Wood Work Adds Value To <br> Your Property Five</h3>
+                                <p class="test">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+                                <h3><a href="#">READ MORE</a></h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="single_news">
+                            <img src="../../../static/img/news_images_2.jpg" alt="">
+                            <div class="texts">
+                                <p class="date"><a href="#">30 May, 2017</a></p>
+                                <h3>Wood Work Adds Value To <br> Your Property Five</h3>
+                                <p class="test">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+                                <h3><a href="#">READ MORE</a></h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="single_news">
+                            <img src="../../../static/img/news_images_3.jpg" alt="">
+                            <div class="texts">
+                                <p class="date"><a href="#">30 May, 2017</a></p>
+                                <h3>Wood Work Adds Value To <br> Your Property Five</h3>
+                                <p class="test">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+                                <h3><a href="#">READ MORE</a></h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+<!--        <section class="footer_carosal">-->
+<!--            <div class="container">-->
+<!--                <div class="row">-->
+<!--                    <div class="col-md-12">-->
+<!--                        <div class="footer_carosal_icon owl-carousel owl-theme">-->
+<!--                            <div class="item">-->
+<!--                                <img src="../../../static/img/microsoft.png" alt="">-->
+<!--                            </div>-->
+<!--                            <div class="item">-->
+<!--                                <img src="../../../static/img/envato.png" alt="">-->
+<!--                            </div>-->
+<!--                            <div class="item">-->
+<!--                                <img src="../../../static/img/yahoo.png" alt="">-->
+<!--                            </div>-->
+<!--                            <div class="item">-->
+<!--                                <img src="../../../static/img/jquery.png" alt="">-->
+<!--                            </div>-->
+<!--                            <div class="item">-->
+<!--                                <img src="../../../static/img/amazon.png" alt="">-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </section>-->
+
+
+
+        <footer class="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4 col-sm-12">
+                        <div class="footer-charity-text">
+                            <h2>HELP CHARITY</h2>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris </p>
+                            <hr>
+                            <p><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a><a href="#"><i class="fa fa-behance" aria-hidden="true"></i></a><a href="#"><i class="fa fa-dribbble" aria-hidden="true"></i></a></p>
+                        </div>
+                    </div>
+                    <div class="col-md-8">
+                        <div class="row">
+                            <div class="col-md-4 col-sm-5">
+                                <div class="footer-text one">
+                                    <h3>RECENT POST</h3>
+                                    <ul>
+                                        <li><a href="#"><i class="material-icons">keyboard_arrow_right</i> Consectetur Adipisicing Elit</a></li>
+                                        <li><a href="#"><i class="material-icons">keyboard_arrow_right</i> Consectetur Adipisicing </a></li>
+                                        <li><a href="#"><i class="material-icons">keyboard_arrow_right</i> Consectetur Adipisicing Elit</a></li>
+                                        <li><a href="#"><i class="material-icons">keyboard_arrow_right</i> Consectetur Adipisicing</a></li>
+                                        <li><a href="#"><i class="material-icons">keyboard_arrow_right</i> Consectetur Adipisicing Elit</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-md-4 col-sm-3">
+                                <div class="footer-text two">
+                                    <h3>USEFUL LINKS</h3>
+                                    <ul>
+                                        <li><a href="#">Home</a></li>
+                                        <li><a href="#">Causes</a></li>
+                                        <li><a href="#">Event</a></li>
+                                        <li><a href="#">Blog</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-md-4 col-sm-4">
+                                <div class="footer-text one">
+                                    <h3>CONTACT US</h3>
+                                    <ul>
+                                        <li><a href="#"><i class="material-icons">location_on</i>1 Street, derby, FL 2147, USA</a></li>
+                                        <li><a href="#"><i class="material-icons">email</i>dartthemes@gmail.com</a></li>
+                                        <li><a href="#"><i class="material-icons">call</i>+123456789</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer_bottom">
+                <p>Copyright @ 2017 <a href="#">DartThemes</a> | All Rights Reserved </p>
+            </div>
+        </footer>
+    </div>
+    <script src="../../../static/js/jquery-3.1.1.min.js"></script>
+    <script src="../../../static/js/animationCounter.js"></script>
+    <script src="../../../static/js/bootstrap.min.js"></script>
+    <script src="../../../static/js/owl.carousel.min.js"></script>
+    <script src="../../../static/js/active.js"></script>
+
+    <script type="text/javascript">
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-36251023-1']);
+        _gaq.push(['_setDomainName', 'jqueryscript.net']);
+        _gaq.push(['_trackPageview']);
+
+        (function() {
+            var ga = document.createElement('script');
+            ga.type = 'text/javascript';
+            ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(ga, s);
+        })();
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>COMMUNITY FORUM</title>
+</head>
+<body>
+<!-- templates/forum/topic_detail.html -->
+<div class="container mt-5">
+    <h1>{{ topic.title }}</h1>
+    <p>{{ topic.description }}</p>
+    <hr>
+    <h3>Posts</h3>
+    {% for post in posts %}
+    <div class="border p-3 mb-3">
+        <h5>{{ post.author.username }}</h5>
+        <p>{{ post.content }}</p>
+    </div>
+    {% endfor %}
+    <a href="{% url 'create_post' topic.id %}" class="btn btn-success">Create Post</a>
+</div>
+
+<a href="{% url 'add_comment' post.id %}">Add Comment</a>
+
+</body>
+</html>

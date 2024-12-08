@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+  <h1>Add a Comment</h1>
+
+    <p>Post: {{ post.title }}</p>
+    <p>{{ post.content }}</p>
+    <hr>
+
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Add Comment</button>
+    </form>
+
+    <a href="{% url 'post_detail' post.id %}">Back to Post</a>
+</body>
+</html>

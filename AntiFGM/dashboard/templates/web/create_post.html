@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Create Post</title>
+    {% load static %}
+    <link href="../../static/css/styles.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #01d262, #0a8f8f);
+            color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            min-height: 100vh;
+        }
+
+        .create-post-container {
+            width: 70%;
+            max-width: 500px;
+            background-color: white;
+            padding: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+            border-radius: 12px;
+            margin-top: 50px;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 24px;
+            color: #01d262;
+            margin-bottom: 20px;
+        }
+
+        form {
+            margin-bottom: 20px;
+        }
+
+        form .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background: linear-gradient(135deg, #01d262, #0a8f8f);
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: bold;
+            border: none;
+            cursor: pointer;
+        }
+
+        form .btn:hover {
+            background: linear-gradient(135deg, #0a8f8f, #01d262);
+        }
+
+        a.btn-secondary {
+            display: inline-block;
+            padding: 10px 20px;
+            background: #ccc;
+            color: #333;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: bold;
+            transition: background 0.3s ease;
+        }
+
+        a.btn-secondary:hover {
+            background: #999;
+        }
+    </style>
+</head>
+<body>
+    <div class="create-post-container">
+        <h1>Create a New Post</h1>
+        <form method="POST">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit" class="btn">Submit</button>
+        </form>
+        <a href="{% url 'community_forum' %}" class="btn-secondary">Back to Forum</a>
+    </div>
+</body>
+</html>

@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advocacy Platform</title>
+    {% load static %}
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        /* General Styles */
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f8f9fa;
+            color: #333;
+        }
+
+        /* Navbar Styles */
+        .navbar {
+            background-color: #01d262;
+        }
+
+        .navbar-brand img {
+            width: 50px;
+        }
+
+        .navbar-nav .nav-link {
+            color: white !important;
+            font-weight: 500;
+            padding: 0.5rem 1rem;
+        }
+
+        .navbar-nav .nav-link:hover {
+            background-color: #007b55;
+            border-radius: 5px;
+        }
+
+        /* Welcome Section */
+        .welcome-section {
+            background: linear-gradient(to right, #01d262, #028c4f);
+            color: white;
+            text-align: center;
+            padding: 100px 20px;
+        }
+
+        .welcome-section h1 {
+            font-size: 3.5rem;
+            font-weight: 700;
+            text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+        }
+
+        .welcome-section p {
+            font-size: 1.2rem;
+            margin-top: 20px;
+        }
+
+        /* Section Header */
+        h2 {
+            font-size: 2rem;
+            font-weight: 600;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        /* Resource Cards */
+        .resource-item {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .resource-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .resource-item h4 {
+            font-weight: 600;
+        }
+
+        .resource-item p {
+            color: #777;
+        }
+
+        /* Event Cards */
+        .card {
+            border-radius: 12px;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: transform 0.3s;
+
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+        }
+
+        .card-img-top {
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .card-title {
+            font-weight: 600;
+        }
+
+        /* Media Gallery */
+        .media-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .media-gallery img,
+        .media-gallery video {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .media-gallery img:hover,
+        .media-gallery video:hover {
+            transform: scale(1.1);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Buttons */
+        .btn-primary {
+            background-color: #01d262;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 30px;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        .btn-primary:hover {
+            background-color: #007b55;
+            transform: scale(1.05);
+        }
+
+        .btn-outline-primary {
+            color: #01d262;
+            border-color: #01d262;
+            border-radius: 30px;
+            padding: 10px 20px;
+        }
+
+        .btn-outline-primary:hover {
+            background-color: #01d262;
+            color: white;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #333;
+            color: white;
+            padding: 20px 0;
+        }
+
+        footer a {
+            color: #01d262;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            color: white;
+            text-decoration: underline;
+        }
+
+        footer .social-icons a {
+            color: white;
+            font-size: 1.5rem;
+            margin-right: 10px;
+            transition: color 0.3s;
+        }
+
+        footer .social-icons a:hover {
+            color: #01d262;
+        }
+
+        /* Section Specific Background Colors */
+        .resource-section {
+            background-color: #f0f8ff; /* Light Blue */
+        }
+
+        .event-section {
+            background-color: #fff5e1; /* Light Yellow */
+        }
+
+        .support-group-section {
+            background-color: #e6f7ff; /* Light Cyan */
+        }
+
+        .media-gallery-section {
+            background-color: #f4e1d2; /* Light Peach */
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar Section -->
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="{% static 'images/logo.png' %}" alt="Logo">
+                Advocacy Platform
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{% url 'blogs' %}">Blogs</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{% url 'submit_report' %}">Submit a Report</a></li>
+                    <li class="nav-item"><a class="btn btn-primary" href="{% url 'community_forum' %}">Community Forum</a></li>
+                </ul>
+                <ul class="navbar-nav ms-3">
+                    {% if user.is_authenticated %}
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-bs-toggle="dropdown">
+                                {{ user.username }}
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="/profile/">Profile</a></li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li><a class="dropdown-item" href="{% url 'logout' %}">Logout</a></li>
+                            </ul>
+                        </li>
+                    {% else %}
+                        <li class="nav-item"><a class="btn btn-primary" href="/login/">Login</a></li>
+                        <li class="nav-item ms-2"><a class="btn btn-outline-primary" href="/signup/">Sign Up</a></li>
+                    {% endif %}
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div>
+        <p></p><br>
+    </div>
+
+    <!-- Welcome Section -->
+    <section class="welcome-section">
+        <div class="container">
+            <h1>Welcome, {{ user.username }}!</h1>
+            <p>Together, we can raise awareness, support survivors, and promote positive change.</p>
+        </div>
+    </section>
+
+    <!-- Resources Section -->
+    <section id="resources" class="py-5 resource-section">
+        <div class="container">
+            <h2>Educational Resources</h2>
+            <div class="row">
+                {% for resource in resources %}
+                    <div class="col-md-4 mb-4">
+                        <div class="resource-item">
+                            <h4>{{ resource.title }}</h4>
+                            <p><strong>Type:</strong> {{ resource.resource_type }}</p>
+                            <p>{{ resource.short_content|safe }}</p>
+                            <a href="{% url 'resource_detail' resource.id %}" class="btn btn-primary">Read More</a>
+                        </div>
+                    </div>
+                {% empty %}
+                    <p>No resources available at the moment.</p>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+
+    <!-- Events Section -->
+    <section id="events" class="py-5 event-section" style="background: linear-gradient(to right, #01d262, #028c4f);
+            color: white;">
+        <div class="container">
+            <h2>Upcoming Events</h2>
+            <div class="row">
+                {% for event in events %}
+                    <div class="col-md-4 mb-4">
+                        <div class="card">
+                            <img src="{{ event.image_url }}" class="card-img-top" alt="{{ event.title }}">
+                            <div class="card-body">
+                                <h5 class="card-title">{{ event.title }}</h5>
+                                <p class="card-text">{{ event.short_description }}</p>
+                            </div>
+                        </div>
+                    </div>
+                {% empty %}
+                    <p>No upcoming events at the moment.</p>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+
+    <!-- Support Groups Section -->
+    <section id="support-groups" class="py-5 support-group-section">
+        <div class="container">
+            <h2>Support Groups</h2>
+            <div class="row">
+                {% for group in support_groups %}
+                    <div class="col-md-4 mb-4">
+                        <div class="resource-item">
+                            <h4>{{ group.name }}</h4>
+                            <p><strong>Location:</strong> {{ group.location }}</p>
+                            <p>{{ group.description }}</p>
+                        </div>
+                    </div>
+                {% empty %}
+                    <p>No support groups available at the moment.</p>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+
+    <!-- Media Gallery Section -->
+    <section id="media-gallery" class="py-5 media-gallery-section" style="background: linear-gradient(to right, #01d262, #028c4f);
+            color: white;">
+        <div class="container">
+            <h2>Media Gallery</h2>
+            <div class="media-gallery">
+                {% for media in media_items %}
+                    <div class="mb-4">
+                        {% if media.type == 'image' %}
+                            <img src="{{ media.url }}" alt="{{ media.title }}">
+                        {% elif media.type == 'video' %}
+                            <video controls>
+                                <source src="{{ media.url }}" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        {% endif %}
+                    </div>
+                {% empty %}
+                    <p>No media available at the moment.</p>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="text-center">
+        <div class="container">
+            <p>&copy; 2024 Advocacy Platform. All rights reserved.</p>
+            <div class="social-icons">
+                <a href="#" class="fab fa-facebook"></a>
+                <a href="#" class="fab fa-twitter"></a>
+                <a href="#" class="fab fa-instagram"></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

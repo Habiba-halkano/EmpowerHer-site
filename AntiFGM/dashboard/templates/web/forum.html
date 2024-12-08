@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Community Forum</title>
+    <style>
+        body {
+            display: flex;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        .sidebar {
+            width: 20%;
+            background-color: #01d262; /* Matches your preferred landing page color */
+            color: white;
+            padding: 20px;
+            height: 100vh; /* Full height of the viewport */
+            overflow-y: auto;
+            box-shadow: 2px 0px 5px rgba(0, 0, 0, 0.1);
+        }
+        .content {
+            flex: 1;
+            padding: 20px;
+            overflow-y: auto;
+            height: 100vh;
+        }
+        .post {
+            background-color: #f9f9f9;
+            margin-bottom: 15px;
+            padding: 15px;
+            border-radius: 5px;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        .replies {
+            margin-top: 10px;
+            padding-left: 20px;
+            border-left: 2px solid #ccc;
+        }
+        .reply {
+            background-color: #e9f5e9;
+            margin-bottom: 10px;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        .btn {
+            display: inline-block;
+            padding: 10px 15px;
+            background-color: #01d262;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        .btn-secondary {
+            background-color: #0073e6;
+        }
+        .create-post {
+            margin-bottom: 20px;
+        }
+        .sidebar h3 {
+        color: #333;
+        font-size: 1.2em;
+        margin-bottom: 10px;
+    }
+
+.sidebar ul {
+    list-style-type: disc;
+    margin-left: 20px;
+}
+
+.sidebar ul li {
+    margin-bottom: 5px;
+}
+    </style>
+</head>
+<body>
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <h2>Menu</h2>
+        <ul>
+            <li><a href="{% url 'dashboard' %}" style="color: white;">Home</a></li>
+            <li><a href="{% url 'create_post' %}" style="color: white;">Create Post</a></li>
+            <li><a href="{% url 'logout' %}" style="color: white;">Logout</a></li>
+        </ul>
+        <hr>
+        <!-- Inspirational Quote Section -->
+        <div class="quote-section" style="margin-bottom: 20px; padding: 10px; background-color: #e7f5fe;color: black; border-radius: 5px;">
+            <h3>Inspirational Quote</h3>
+            <p><em>"{{ random_quote }}"</em></p>
+        </div>
+<hr>
+        <!-- Advocacy Tips Section -->
+        <div class="advocacy-tips" style="padding: 10px; background-color: #eaf8ea; border-radius: 5px;color: black">
+            <h3>Advocacy Tips</h3>
+            <ul>
+                {% for tip in advocacy_tips %}
+                    <li>{{ tip }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="content">
+        <h1>Community Forum</h1>
+        <div class="create-post">
+            {% if user.is_authenticated %}
+                <a href="{% url 'create_post' %}" class="btn">Create New Post</a>
+            {% else %}
+                <p><a href="{% url 'login' %}">Log in</a> to create a post.</p>
+            {% endif %}
+        </div>
+
+        <div class="posts">
+            {% for post in posts %}
+                <div class="post">
+                    <p><strong>{{ post.user }}</strong> said:</p>
+                    <p>{{ post.content }}</p>
+                    <p class="post-meta">Posted on: {{ post.created_at|date:"d M Y, H:i" }}</p>
+                    <a href="{% url 'reply_to_post' post.id %}" class="btn btn-secondary">Reply</a>
+                    <div class="replies">
+                        <h4>Replies:</h4>
+                        {% for reply in post.replies.all %}
+                            <div class="reply">
+                                <p><strong>{{ reply.user }}</strong> replied:</p>
+                                <p>{{ reply.content }}</p>
+                                <p class="reply-meta">Replied on: {{ reply.created_at|date:"d M Y, H:i" }}</p>
+                            </div>
+                        {% empty %}
+                            <p>No replies yet.</p>
+                        {% endfor %}
+                    </div>
+                </div>
+            {% empty %}
+                <p>No posts available. Be the first to post!</p>
+            {% endfor %}
+        </div>
+    </div>
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        const toggleButtons = document.querySelectorAll(".toggle-replies");
+
+        toggleButtons.forEach(button => {
+            button.addEventListener("click", () => {
+                const postId = button.getAttribute("data-post-id");
+                const repliesContainer = document.getElementById(`replies-${postId}`);
+
+                if (repliesContainer.style.display === "none") {
+                    repliesContainer.style.display = "block";
+                    button.textContent = "Hide Replies";
+                } else {
+                    repliesContainer.style.display = "none";
+                    button.textContent = `Show Replies (${repliesContainer.childElementCount - 1})`;
+                }
+            });
+        });
+    });
+</script>
+
+</body>
+</html>

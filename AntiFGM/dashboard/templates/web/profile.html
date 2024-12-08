@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #01d262, #0a8f8f);
+            color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start; /* Adjusted to start at the top */
+            height: 100vh;
+        }
+
+        .profile-container {
+            width: 70%;
+            max-width: 500px;
+            background-color: white;
+            padding: 20px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+            border-radius: 12px;
+            text-align: center;
+            margin-top: 50px; /* Added margin to fine-tune positioning */
+        }
+
+        h1 {
+            font-size: 24px;
+            color: #01d262;
+            margin-bottom: 20px;
+        }
+
+        .profile-avatar {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #01d262, #0a8f8f);
+            color: white;
+            font-size: 48px;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .profile-details p {
+            font-size: 18px;
+            margin: 10px 0;
+        }
+
+        .profile-details .field-label {
+            font-weight: bold;
+            color: #555;
+        }
+
+        a.btn {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background: linear-gradient(135deg, #01d262, #0a8f8f);
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: bold;
+            transition: background 0.3s ease;
+        }
+
+        a.btn:hover {
+            background: linear-gradient(135deg, #0a8f8f, #01d262);
+        }
+    </style>
+</head>
+<body>
+    <div class="profile-container">
+        <!-- Default Avatar with First Letter -->
+        <div class="profile-avatar">
+            {{ user.username|slice:":1"|upper }}
+        </div>
+
+        <h1>{{ user.username }}'s Profile</h1>
+
+        <div class="profile-details">
+            <p><span class="field-label">Username:</span> {{ user.username }}</p>
+            <p><span class="field-label">Email:</span> {{ user.email }}</p>
+            <!-- Add more fields here if needed -->
+        </div>
+
+        <a href="{% url 'edit_profile' %}" class="btn">Edit Profile</a>
+        <a href="{% url 'dashboard' %}" class="btn">Back to Home Page</a>
+    </div>
+</body>
+</html>
